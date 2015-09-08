@@ -114,9 +114,9 @@ public class Shape extends View {
         super.onDraw(canvas);
         canvas.drawColor(Color.WHITE);
         Paint paint = new Paint();
-        paint.setColor(887648);
+        paint.setColor(Color.RED);
 
-        canvas.drawRect(fRecX, fRecY, fRecH, fRecW, paint);
+        canvas.drawRect(fRecX,fRecY,fRecW,fRecH,paint);
         canvas.drawCircle(fCirX,fCirY,fCirR,paint);
 
     }
