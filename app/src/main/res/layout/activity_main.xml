@@ -164,11 +164,11 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="150dp"
         android:layout_height="40dp"
-        android:text="DRAW"
         android:id="@+id/DrawButton"
         android:layout_above="@+id/ShapeLayout"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:text="@string/DRAW" />
 
     <Spinner
         android:layout_width="150dp"

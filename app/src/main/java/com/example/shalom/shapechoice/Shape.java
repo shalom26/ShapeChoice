@@ -15,12 +15,15 @@ public class Shape extends View {
     float fRecY;
     float fRecH;
     float fRecW;
-    Paint pRecPaint;
+    Paint pRecPaint=new Paint();
 
     float fCirX;
     float fCirY;
     float fCirR;
-    Paint pCirPaint;
+    Paint pCirPaint=new Paint();
+
+    Paint paint ;
+
 
     public Shape(Context context){
         super(context);
@@ -107,17 +110,30 @@ public class Shape extends View {
         this.pCirPaint = pCirPaint;
     }
 
+public void setDafulteColor(){
+    pCirPaint.setColor(Color.MAGENTA);
+    pRecPaint.setColor(Color.MAGENTA);
+}
+
+    public void Shape(float xrec,float yrec,float wrec,float hrec,Paint paint){
+        this.fRecX=xrec;
+        this.fRecY=yrec;
+        this.fRecW=wrec;
+        this.fRecH=hrec;
+        this.paint=paint;
+
+
+    }
 
     @Override
 
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.drawColor(Color.WHITE);
-        Paint paint = new Paint();
-        paint.setColor(Color.RED);
 
-        canvas.drawRect(fRecX,fRecY,fRecW,fRecH,paint);
-        canvas.drawCircle(fCirX,fCirY,fCirR,paint);
+
+        canvas.drawRect(fRecX,fRecY,fRecW,fRecH,pRecPaint);
+        canvas.drawCircle(fCirX,fCirY,fCirR,pCirPaint);
 
     }
 
